@@ -6,6 +6,11 @@ import Link from 'next/link'
 import cvic_logo_600 from '../public/logos/cvic_logo_600.png'
 import { AiOutlineMenu } from 'react-icons/ai'
 import SideBar from './SideBar'
+import { BsToggleOff, BsToggleOn } from 'react-icons/bs'
+import { GiEarthAmerica, GiJapan } from 'react-icons/gi'
+import { FaLanguage } from 'react-icons/fa'
+import { GrLanguage } from 'react-icons/gr'
+import { HiLanguage } from 'react-icons/hi2'
 
 interface NavBarProps {
 }
@@ -13,6 +18,7 @@ interface NavBarProps {
 const Navbar: React.FC<NavBarProps> = () => {
   const [nav, setNav] = useState(false);
   const [showShadow, setShowShadow] = useState<boolean>(false);
+  const [language, setLanguage] = useState<string>('ja');
 
   useEffect(() => {
       const handleShadow = () => {
@@ -32,6 +38,12 @@ const Navbar: React.FC<NavBarProps> = () => {
       };
   }, []);
 
+  const handleLanguage = () => {
+    if (language === 'en') {
+      setLanguage('ja');
+    } else setLanguage('en')
+  }
+
   const handleNav = () => {
     setNav(!nav);
   }
@@ -44,11 +56,35 @@ const Navbar: React.FC<NavBarProps> = () => {
               src={cvic_logo_600}
               alt='/logo'
               width='600'
-              // height={'auto'}
               unoptimized
           />
         </Link>
-      <div>language toggle</div>
+      <div className='hidden md:flex h-full w-auto'>
+        <div
+          className="ml-5 text-3xl flex justify-center items-center w-full h-full cursor-pointer"
+          onClick={() => handleLanguage()}
+        >
+                    {
+                        language === 'ja'
+                        ?
+                        <div className='flex uppercase'>
+                            <FaLanguage />
+                            {language}
+                            <div className='ml-1 hover:scale-110 ease-in duration-300'>
+                                <BsToggleOff/>
+                            </div>
+                        </div>
+                        :
+                        <div className='flex uppercase'>
+                          <FaLanguage />
+                            {language}
+                            <div className='ml-1 hover:scale-110 ease-in duration-300'>
+                                <BsToggleOn/>
+                            </div>
+                        </div>
+                    }
+                </div>
+      </div>
       </div>
       <div className='max-w-[1240px] mx-auto hidden md:flex justify-between items-center p-2 2xl:px-16"'>
         <div className='w-full h-full p-2 grid grid-cols-7'>
@@ -92,7 +128,7 @@ const Navbar: React.FC<NavBarProps> = () => {
       <div onClick={handleNav} className='md:hidden cursor-pointer'>
           <AiOutlineMenu size={40}/>
       </div>
-      <SideBar nav={ nav} setNav={ setNav } handleNav={ handleNav }/>
+      <SideBar nav={ nav} setNav={ setNav } handleNav={ handleNav } language={ language } handleLanguage={ handleLanguage }/>
     </div>
   )
 }
