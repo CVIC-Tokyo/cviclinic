@@ -62,7 +62,7 @@ const Navbar: React.FC<NavBarProps> = () => {
         </div>
       </div>
       <div onClick={handleNav} className='md:hidden cursor-pointer'>
-          <AiOutlineMenu size={25}/>
+          <AiOutlineMenu size={40}/>
       </div>
       <SideBar nav={ nav} setNav={ setNav } handleNav={ handleNav }/>
     </div>
