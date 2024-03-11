@@ -9,7 +9,7 @@ interface ContactProps {}
 
 const initValues = {
   name: "",
-  surename: "",
+  surname: "",
   email: "",
   subject: "",
   message: "",
@@ -82,7 +82,7 @@ const Contact: React.FC<ContactProps> = () => {
                     className="border-2 text-black rounded-lg p-3 w-[100%] flex border-gray-300"
                     type="text"
                     name="surname"
-                    value={values.email}
+                    value={values.surname}
                     onChange={handleChange}
                   />
                 </div>
@@ -95,7 +95,7 @@ const Contact: React.FC<ContactProps> = () => {
                   className="border-2 text-black rounded-lg p-3 flex border-gray-300"
                   type="text"
                   name="email"
-                  value={values.subject}
+                  value={values.email}
                   onChange={handleChange}
                 />
               </div>
