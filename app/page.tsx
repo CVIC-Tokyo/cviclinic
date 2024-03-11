@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Carousel from "@/components/Carousel";
-import Head from "next/head";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [showShadow, setShowShadow] = useState<boolean>(false);
@@ -19,10 +19,11 @@ export default function Home() {
 },[]);
 
   return (
-    <div className='w-full h-full'>
-      <div className='w-full h-full flex justify-center'>
+    <div className='w-full h-screen'>
+      <div className='w-full h-auto'>
         <Navbar showShadow={showShadow} setShowShadow={setShowShadow}/>
         <Carousel/>
+        <Footer/>
       </div>
     </div>
   );
