@@ -53,7 +53,7 @@ const Carousel = () => {
 
     return (
         <div className='w-full h-auto'>
-            <div className='h-[172px] w-[350px] md:h-[350px] md:w-[700px] lg:h-[640px] lg:w-[1200px] m-auto relative group'>
+            <div className='h-[180px] w-[360px] md:h-[350px] md:w-[700px] lg:h-[640px] lg:w-[1200px] m-auto relative group'>
                 <div
                     style={{backgroundImage: `url(${images[currentIndex]})`}}
                     className='w-full h-full rounded bg-cover bg-center shadow-lg'
