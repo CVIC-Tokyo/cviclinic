@@ -2,7 +2,11 @@ import React from 'react'
 
 const AboutPage = () => {
   return (
-    <div className=''>About Page</div>
+    <div className='w-full h-auto'>
+      <div className='w-full h-[600px] flex justify-center items-center'>
+        About Page
+      </div>
+    </div>
   )
 }
 
