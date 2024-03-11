@@ -1,16 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
-import logo from '../public/logos/cvic_logo_600.webp'
+import cvic_logo_600 from '../public/logos/cvic_logo_600.png'
 
 interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = () => {
   return (
-    <div className='bg-[#820000] text-white w-full h-auto p-3 flex flex-col justify-center items-center align-bottom mt-60'>
+    <div className='bg-[#820000] text-white w-full h-auto p-3 flex flex-col justify-center items-center align-bottom'>
         <div className='flex flex-col justify-center items-center'>
             <Image
-                src={logo}
+                src={cvic_logo_600}
                 width='300'
                 height='100'
                 alt='/logo'
