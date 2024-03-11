@@ -3,16 +3,16 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
 import { RxDotFilled } from 'react-icons/rx'
 
 const images = [
-    '/images/carousel-1.jpg',
-    '/images/carousel-2.jpg',
-    '/images/carousel-3.jpg',
-    '/images/carousel-4.jpg',
-    '/images/carousel-5.jpg',
+    '/images/carousel-1.png',
+    '/images/carousel-2.png',
+    '/images/carousel-3.png',
+    '/images/carousel-4.png',
+    '/images/carousel-5.png',
     '/images/carousel-6.jpg',
     '/images/carousel-7.jpg',
     '/images/carousel-8.jpg',
     '/images/carousel-9.jpg',
-    '/images/carousel-10.jpg',
+    '/images/carousel-10.png',
     '/images/carousel-11.jpg',
     '/images/carousel-12.jpg',
     '/images/carousel-13.jpg',
@@ -28,7 +28,7 @@ const Carousel = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
-        }, 3000); // Rotate every 3 seconds
+        }, 5000); // Rotate every 3 seconds
 
         return () => clearInterval(interval);
     }, []);
