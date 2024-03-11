@@ -19,11 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className='w-full h-screen text-center'>
-        <Navbar/>
+      <body className="w-full h-screen text-center">
+        <Navbar />
         {children}
-        <Contact/>
-        <Footer/>
+        <Contact />
+        <Footer />
       </body>
     </html>
   );
