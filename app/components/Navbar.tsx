@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import cvic_logo_600 from "../public/logos/cvic_logo_600.png";
+import cvic_logo_600 from "@/public/logos/cvic_logo_600.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import SideBar from "./SideBar";
 import { BsToggleOff, BsToggleOn } from "react-icons/bs";

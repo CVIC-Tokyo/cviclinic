@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import cvic_logo_600 from "../public/logos/cvic_logo_600.png";
+import cvic_logo_600 from "@/public/logos/cvic_logo_600.png";
 import {
   AiFillCalendar,
   AiFillPushpin,

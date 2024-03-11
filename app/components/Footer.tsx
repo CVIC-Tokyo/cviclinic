@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import cvic_logo_600 from "../public/logos/cvic_logo_600.png";
+import cvic_logo_600 from "@/public/logos/cvic_logo_600.png";
 
 interface FooterProps {}
 
