@@ -7,10 +7,7 @@ import cvic_logo_600 from '../public/logos/cvic_logo_600.png'
 import { AiOutlineMenu } from 'react-icons/ai'
 import SideBar from './SideBar'
 import { BsToggleOff, BsToggleOn } from 'react-icons/bs'
-import { GiEarthAmerica, GiJapan } from 'react-icons/gi'
 import { FaLanguage } from 'react-icons/fa'
-import { GrLanguage } from 'react-icons/gr'
-import { HiLanguage } from 'react-icons/hi2'
 
 interface NavBarProps {
 }
