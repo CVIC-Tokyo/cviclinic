@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState, useEffect } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
 import { RxDotFilled } from 'react-icons/rx'
@@ -28,7 +30,7 @@ const Carousel = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
-        }, 5000); // Rotate every 3 seconds
+        }, 3000); // Rotate every 3 seconds
 
         return () => clearInterval(interval);
     }, []);
@@ -50,11 +52,11 @@ const Carousel = () => {
     }
 
     return (
-        <div className='w-full h-screen pt-52'>
-            <div className='h-[172px] w-[350px] md:h-[350px] md:w-[700px] lg:h-[600px] lg:w-[1200px] m-auto relative group'>
+        <div className='w-full h-screen pt-36 md:pt-40 lg:pt-52'>
+            <div className='h-[172px] w-[350px] md:h-[350px] md:w-[700px] lg:h-[640px] lg:w-[1200px] m-auto relative group'>
                 <div
                     style={{backgroundImage: `url(${images[currentIndex]})`}}
-                    className='w-full h-full rounded bg-cover bg-center shadow-lg hover:scale-95 ease-in duration-500'
+                    className='w-full h-full rounded bg-cover bg-center shadow-lg'
                 >
                     <div className='hidden group-hover:block absolute top-[50%] -translate-x-8 translate-y-[-50%] text-2xl rounded-full p-2 bg-black/30 text-white hover:scale-110 ease-in duration-300 cursor-pointer'>
                         <BsChevronCompactLeft
@@ -79,17 +81,6 @@ const Carousel = () => {
                 </div>
             </div>
         </div>
-        // <div className="relative max-w-screen w-full mt-8 bg-red-500">
-        //     <div className="overflow-hidden">
-        //         <div className="flex transition-transform duration-1000" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-        //             {images.map((image, index) => (
-        //                 <div key={index} className="w-full flex-shrink-0">
-        //                     <img src={image} alt={`Slide ${index + 1}`} className="w-full h-auto" />
-        //                 </div>
-        //             ))}
-        //         </div>
-        //     </div>
-        // </div>
     );
 };
 
