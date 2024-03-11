@@ -52,7 +52,7 @@ const Carousel = () => {
     }
 
     return (
-        <div className='w-full h-screen pt-36 md:pt-40 lg:pt-52'>
+        <div className='w-full h-auto'>
             <div className='h-[172px] w-[350px] md:h-[350px] md:w-[700px] lg:h-[640px] lg:w-[1200px] m-auto relative group'>
                 <div
                     style={{backgroundImage: `url(${images[currentIndex]})`}}
@@ -69,16 +69,16 @@ const Carousel = () => {
                             onClick={nextSlide} />
                     </div>
                 </div>
-                <div className=' flex top-4 justify-center py-2'>
-                    {images.map((slide, slideIndex) => {
-                        return <div
-                            key={slideIndex}
-                            onClick={() => goToSlide(slideIndex)}
-                            className='text-xs md:text-xl cursor-pointer'>
-                            <RxDotFilled/>
-                        </div>
-                    })}
-                </div>
+            </div>
+            <div className='flex top-4 justify-center py-2'>
+                {images.map((slide, slideIndex) => {
+                    return <div
+                        key={slideIndex}
+                        onClick={() => goToSlide(slideIndex)}
+                        className='text-xs md:text-xl cursor-pointer'>
+                        <RxDotFilled/>
+                    </div>
+                })}
             </div>
         </div>
     );
