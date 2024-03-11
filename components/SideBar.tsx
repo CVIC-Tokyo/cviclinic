@@ -40,20 +40,27 @@ const SideBar: React.FC<SideBarProps> = ({ nav, setNav, handleNav }) => {
                     >
                         Language toggle
                     </div>
-                    <Link className='hover:scale-200 ease-in duration-300' onClick={() => setNav(false)} href='/'>
+                    <Link className='hover:scale-200 ease-in duration-300'
+                        onClick={() => setNav(false)} href='/'>
                         <li className='py-4 text-sm'>Home</li>
                     </Link>
                     <Link onClick={() => setNav(false)} href='/#skills'>
-                        <li className='py-4 text-sm'>Skills</li>
+                        <li className='py-4 text-sm'>Cardiac Imaging</li>
                     </Link>
                     <Link onClick={() => setNav(false)} href='/#projects'>
-                        <li className='py-4 text-sm'>Projects</li>
+                        <li className='py-4 text-sm'>Inspection Flow</li>
                     </Link>
                     <Link onClick={() => setNav(false)} href='/#about'>
-                        <li className='py-4 text-sm'>About</li>
+                        <li className='py-4 text-sm'>Dock Lists</li>
                     </Link>
                     <Link onClick={() => setNav(false)} href='/#contact'>
-                        <li className='py-4 text-sm'>Contacts</li>
+                        <li className='py-4 text-sm'>Fees</li>
+                    </Link>
+                    <Link onClick={() => setNav(false)} href='/#contact'>
+                        <li className='py-4 text-sm'>Access</li>
+                    </Link>
+                    <Link onClick={() => setNav(false)} href='/#contact'>
+                        <li className='py-4 text-sm'>More</li>
                     </Link>
                 </ul>
                 <div className='pt-10'>
