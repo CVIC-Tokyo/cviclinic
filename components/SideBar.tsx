@@ -44,22 +44,22 @@ const SideBar: React.FC<SideBarProps> = ({ nav, setNav, handleNav }) => {
                         onClick={() => setNav(false)} href='/'>
                         <li className='py-4 text-sm'>Home</li>
                     </Link>
-                    <Link onClick={() => setNav(false)} href='/#skills'>
+                    <Link onClick={() => setNav(false)} href='/'>
                         <li className='py-4 text-sm'>Cardiac Imaging</li>
                     </Link>
-                    <Link onClick={() => setNav(false)} href='/#projects'>
+                    <Link onClick={() => setNav(false)} href='/'>
                         <li className='py-4 text-sm'>Inspection Flow</li>
                     </Link>
-                    <Link onClick={() => setNav(false)} href='/#about'>
+                    <Link onClick={() => setNav(false)} href='/'>
                         <li className='py-4 text-sm'>Dock Lists</li>
                     </Link>
-                    <Link onClick={() => setNav(false)} href='/#contact'>
+                    <Link onClick={() => setNav(false)} href='/'>
                         <li className='py-4 text-sm'>Fees</li>
                     </Link>
-                    <Link onClick={() => setNav(false)} href='/#contact'>
+                    <Link onClick={() => setNav(false)} href='/'>
                         <li className='py-4 text-sm'>Access</li>
                     </Link>
-                    <Link onClick={() => setNav(false)} href='/#contact'>
+                    <Link onClick={() => setNav(false)} href='/'>
                         <li className='py-4 text-sm'>More</li>
                     </Link>
                 </ul>
