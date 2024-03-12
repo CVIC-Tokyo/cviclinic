@@ -5,23 +5,16 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 
 const images = [
-  "/images/carousel-1.png",
-  "/images/carousel-2.png",
-  "/images/carousel-3.png",
-  "/images/carousel-4.png",
-  "/images/carousel-5.png",
-  "/images/carousel-6.jpg",
+  "/images/carousel-1.jpg",
+  "/images/carousel-2.JPG",
+  "/images/carousel-3.JPG",
+  "/images/carousel-4.JPG",
+  "/images/carousel-5.JPG",
+  "/images/carousel-6.JPG",
   "/images/carousel-7.jpg",
   "/images/carousel-8.jpg",
-  "/images/carousel-9.jpg",
-  "/images/carousel-10.png",
-  "/images/carousel-11.jpg",
-  "/images/carousel-12.jpg",
-  "/images/carousel-13.jpg",
-  "/images/carousel-14.jpg",
-  "/images/carousel-15.jpg",
-  "/images/carousel-16.jpg",
-  "/images/carousel-17.jpg",
+  "/images/carousel-9.JPG",
+  "/images/carousel-10.jpg",
 ];
 
 const Carousel = () => {
