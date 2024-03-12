@@ -5,23 +5,16 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 
 const images = [
-  "/images/carousel-1.png",
-  "/images/carousel-2.png",
-  "/images/carousel-3.png",
-  "/images/carousel-4.png",
-  "/images/carousel-5.png",
-  "/images/carousel-6.jpg",
+  "/images/carousel-1.jpg",
+  "/images/carousel-2.JPG",
+  "/images/carousel-3.JPG",
+  "/images/carousel-4.JPG",
+  "/images/carousel-5.JPG",
+  "/images/carousel-6.JPG",
   "/images/carousel-7.jpg",
   "/images/carousel-8.jpg",
-  "/images/carousel-9.jpg",
-  "/images/carousel-10.png",
-  "/images/carousel-11.jpg",
-  "/images/carousel-12.jpg",
-  "/images/carousel-13.jpg",
-  "/images/carousel-14.jpg",
-  "/images/carousel-15.jpg",
-  "/images/carousel-16.jpg",
-  "/images/carousel-17.jpg",
+  "/images/carousel-9.JPG",
+  "/images/carousel-10.jpg",
 ];
 
 const Carousel = () => {
@@ -30,7 +23,7 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Rotate every 3 seconds
+    }, 4000); // Rotate every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -53,16 +46,16 @@ const Carousel = () => {
 
   return (
     <div className="w-full h-auto">
-      <div className="h-[180px] w-[360px] md:h-[350px] md:w-[700px] lg:h-[640px] lg:w-[1200px] m-auto relative group">
+      <div className="h-auto w-screen m-auto relative group">
         <div
-          style={{ backgroundImage: `url(${images[currentIndex]})` }}
-          className="w-full h-full rounded bg-cover bg-center shadow-lg"
+          style={{ backgroundImage: `url(${images[currentIndex]})`, height: '50vw' }}
+          className="w-full rounded bg-cover bg-center shadow-lg"
         >
-          <div className="hidden group-hover:block absolute top-[50%] -translate-x-8 translate-y-[-50%] text-2xl rounded-full p-2 bg-black/30 text-white hover:scale-110 ease-in duration-300 cursor-pointer">
-            <BsChevronCompactLeft size={30} onClick={prevSlide} />
+          <div className="hidden group-hover:block absolute top-[50%] -translate-x-8 translate-y-[-50%] text-2xl p-1 bg-black/50 text-white hover:scale-110 ease-in duration-300 cursor-pointer">
+            <BsChevronCompactLeft size={40} onClick={prevSlide} />
           </div>
-          <div className="hidden group-hover:block absolute top-[50%] translate-y-[-50%] right-[-32px] text-2xl rounded-full p-2 bg-black/30 text-white hover:scale-110 ease-in duration-300 cursor-pointer">
-            <BsChevronCompactRight size={30} onClick={nextSlide} />
+          <div className="hidden group-hover:block absolute top-[50%] translate-y-[-50%] right-[-32px] text-2xl p-1 bg-black/50 text-white hover:scale-110 ease-in duration-300 cursor-pointer">
+            <BsChevronCompactRight size={40} onClick={nextSlide} />
           </div>
         </div>
       </div>

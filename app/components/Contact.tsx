@@ -55,15 +55,15 @@ const Contact: React.FC<ContactProps> = () => {
   return (
     <div id="contact" className="w-full md:h-auto p-5 flex items-center py-24">
       <div className="w-full m-auto flex items-center justify-center pt-4">
-        <div className="w-full md:w-[1240] lg:w-[1240px] rounded p-10 shadow-lg border-2 bg-opacity-50">
-          <div className="flex flex-row justify-between ">
-            <h2 className="py-4">Get In Touch!</h2>
+        <div className="w-full max-w-[1240] lg:w-[1240px] rounded p-5 shadow-lg border-2 bg-opacity-50">
+          <div className="flex flex-row justify-between">
+            <h2 className="py-2">Get In Touch!</h2>
           </div>
           <form onSubmit={onSubmit}>
-            <div className="flex flex-col py-2 w-full h-auto">
+            <div className="flex flex-col justify-start py-2 w-full h-auto">
               <div className="grid grid-cols-2 py-2">
                 <div>
-                  <label className="uppercase text-sm py-3">
+                  <label className="uppercase text-xs md:text-sm">
                     Name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -75,7 +75,7 @@ const Contact: React.FC<ContactProps> = () => {
                   />
                 </div>
                 <div>
-                  <label className="uppercase text-sm py-3">
+                  <label className="uppercase text-xs md:text-sm">
                     surname <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -88,7 +88,7 @@ const Contact: React.FC<ContactProps> = () => {
                 </div>
               </div>
               <div className="flex flex-col py-2">
-                <label className="uppercase text-sm py-3">
+                <label className="uppercase text-xs md:text-sm">
                   Email <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -100,7 +100,7 @@ const Contact: React.FC<ContactProps> = () => {
                 />
               </div>
               <div className="flex flex-col py-2">
-                <label className="uppercase text-sm py-3">
+                <label className="uppercase text-xs md:text-sm">
                   Subject <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -112,7 +112,7 @@ const Contact: React.FC<ContactProps> = () => {
                 />
               </div>
               <div className="flex flex-col py-2">
-                <label className="uppercase text-sm py-3">
+                <label className="uppercase text-xs md:text-sm">
                   Message <span className="text-red-500">*</span>
                 </label>
                 <textarea
@@ -126,7 +126,7 @@ const Contact: React.FC<ContactProps> = () => {
             </div>
             <button
               disabled={hasEmpty}
-              className={`flex justify-center items-center rounded-xl shadow-lg w-full p-5 mt-5 ${hasEmpty ? "cursor-not-allowed bg-red-200" : "bg-[#820000]"}`}
+              className={`flex justify-center items-center rounded-xl shadow-lg w-full p-5 mt-5 ${hasEmpty ? "cursor-not-allowed bg-gray-200" : "bg-[#820000]"}`}
             >
               {isLoading && !messageSent ? (
                 <AiOutlineReload className="animate-spin" />
