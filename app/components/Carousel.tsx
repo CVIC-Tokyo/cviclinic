@@ -46,16 +46,16 @@ const Carousel = () => {
 
   return (
     <div className="w-full h-auto">
-      <div className="h-[180px] w-[360px] md:h-[350px] md:w-[700px] lg:h-[640px] lg:w-[1200px] m-auto relative group">
+      <div className="h-auto w-screen m-auto relative group">
         <div
-          style={{ backgroundImage: `url(${images[currentIndex]})` }}
-          className="w-full h-full rounded bg-cover bg-center shadow-lg"
+          style={{ backgroundImage: `url(${images[currentIndex]})`, height: '50vw' }}
+          className="w-full rounded bg-cover bg-center shadow-lg"
         >
-          <div className="hidden group-hover:block absolute top-[50%] -translate-x-8 translate-y-[-50%] text-2xl rounded-full p-2 bg-black/30 text-white hover:scale-110 ease-in duration-300 cursor-pointer">
-            <BsChevronCompactLeft size={30} onClick={prevSlide} />
+          <div className="hidden group-hover:block absolute top-[50%] -translate-x-8 translate-y-[-50%] text-2xl p-1 bg-black/50 text-white hover:scale-110 ease-in duration-300 cursor-pointer">
+            <BsChevronCompactLeft size={40} onClick={prevSlide} />
           </div>
-          <div className="hidden group-hover:block absolute top-[50%] translate-y-[-50%] right-[-32px] text-2xl rounded-full p-2 bg-black/30 text-white hover:scale-110 ease-in duration-300 cursor-pointer">
-            <BsChevronCompactRight size={30} onClick={nextSlide} />
+          <div className="hidden group-hover:block absolute top-[50%] translate-y-[-50%] right-[-32px] text-2xl p-1 bg-black/50 text-white hover:scale-110 ease-in duration-300 cursor-pointer">
+            <BsChevronCompactRight size={40} onClick={nextSlide} />
           </div>
         </div>
       </div>
