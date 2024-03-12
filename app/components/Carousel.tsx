@@ -23,7 +23,7 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Rotate every 3 seconds
+    }, 4000); // Rotate every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
