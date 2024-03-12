@@ -85,43 +85,43 @@ const Navbar: React.FC<NavBarProps> = () => {
         <div className="w-full h-full p-2 grid grid-cols-7">
           <Link
             href="/"
-            className="p-2 bg-white text-xs md:text-base lg:text-lg  flex items-center justify-center tracking-wide uppercase hover:bg-gray-50 cursor-pointer"
+            className="navbar-button"
           >
             Home
           </Link>
           <Link
             href="/"
-            className="p-2 bg-white text-[10px] md:text-base lg:text-lg  flex items-center justify-center tracking-wide uppercase hover:bg-gray-50 cursor-pointer"
+            className="navbar-button"
           >
             Cardiac Imaging
           </Link>
           <Link
-            href=""
-            className="p-2 bg-white text-[8px] md:text-base lg:text-lg  flex items-center justify-center tracking-wide uppercase hover:bg-gray-50 cursor-pointer"
+            href="/"
+            className="navbar-button"
           >
             Inspection Flow
           </Link>
           <Link
-            href=""
-            className="p-2 bg-white text-[10px] md:text-base lg:text-lg  flex items-center justify-center tracking-wide uppercase hover:bg-gray-50 cursor-pointer"
+            href="/"
+            className="navbar-button"
           >
             Dock List
           </Link>
           <Link
-            href=""
-            className="p-2 bg-white text-xs md:text-base lg:text-lg  flex items-center justify-center tracking-wide uppercase hover:bg-gray-50 cursor-pointer"
+            href="/"
+            className="navbar-button"
           >
             Fees
           </Link>
           <Link
-            href=""
-            className="p-2 bg-white text-xs md:text-base lg:text-lg  flex items-center justify-center tracking-wide uppercase hover:bg-gray-50 cursor-pointer"
+            href="/"
+            className="navbar-button"
           >
             Access
           </Link>
           <Link
-            href=""
-            className="p-2 bg-white text-xs md:text-base lg:text-lg  flex items-center justify-center tracking-wide uppercase hover:bg-gray-50 cursor-pointer"
+            href="/"
+            className="navbar-button"
           >
             More
           </Link>

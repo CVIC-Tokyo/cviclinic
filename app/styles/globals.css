@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth !important;
+  }
+
+@layer base {
+    .navbar-button {
+        @apply p-2 bg-white md:text-base lg:text-lg  flex items-center justify-center tracking-wide uppercase hover:bg-gray-50 cursor-pointer
+    }
+}

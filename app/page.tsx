@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "@/app/components/Carousel";
-import Link from "next/link";
-import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
 import LoginBar from "@/app/components/LoginBar";
+import './styles/globals.css'
 
 export default function Home() {
   return (
