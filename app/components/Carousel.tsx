@@ -48,7 +48,10 @@ const Carousel = () => {
     <div className="w-full h-auto">
       <div className="h-auto w-screen m-auto relative group">
         <div
-          style={{ backgroundImage: `url(${images[currentIndex]})`, height: '50vw' }}
+          style={{
+            backgroundImage: `url(${images[currentIndex]})`,
+            height: "50vw",
+          }}
           className="w-full rounded bg-cover bg-center shadow-lg"
         >
           <div className="hidden group-hover:block absolute top-[50%] -translate-x-8 translate-y-[-50%] text-2xl p-1 bg-black/50 text-white hover:scale-110 ease-in duration-300 cursor-pointer">

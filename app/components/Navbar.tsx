@@ -8,6 +8,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import SideBar from "./SideBar";
 import { BsToggleOff, BsToggleOn } from "react-icons/bs";
 import { FaLanguage } from "react-icons/fa";
+import Dropdown_Home from "./dropdowns/Dropdown_Home";
 
 interface NavBarProps {}
 
@@ -43,6 +44,13 @@ const Navbar: React.FC<NavBarProps> = () => {
   const handleNav = () => {
     setNav(!nav);
   };
+
+  const homeDropdownPages: DropdownPage[] = [
+    { Home: "" },
+    { "About CVIC": "about" },
+    { Doctors: "doctors" },
+    { Equipments: "equipments" },
+  ];
 
   return (
     <div
@@ -81,54 +89,31 @@ const Navbar: React.FC<NavBarProps> = () => {
           </div>
         </div>
       </div>
-      <div className='max-w-[1240px] mx-auto hidden md:flex justify-between items-center pt-2'>
-        <div className="w-full h-full p-1 grid grid-cols-7">
-          <Link
-            href="/"
-            className="navbar-button"
-          >
-            Home
+      <div className="max-w-[1240px] mx-auto hidden md:flex justify-between items-center pt-2">
+        <div className="w-full h-full p-1 grid grid-cols-6">
+          <Dropdown_Home homeDropdownPages={homeDropdownPages} />
+          <Link href="/" className="navbar-button">
+            Services
           </Link>
-          <Link
-            href="/"
-            className="navbar-button"
-          >
-            Cardiac Imaging
+          <Link href="/" className="navbar-button">
+            Process
           </Link>
-          <Link
-            href="/"
-            className="navbar-button"
-          >
-            Inspection Flow
+          <Link href="/" className="navbar-button">
+            Contact
           </Link>
-          <Link
-            href="/"
-            className="navbar-button"
-          >
-            Dock List
-          </Link>
-          <Link
-            href="/"
-            className="navbar-button"
-          >
-            Fees
-          </Link>
-          <Link
-            href="/"
-            className="navbar-button"
-          >
+          <Link href="/" className="navbar-button">
             Access
           </Link>
-          <Link
-            href="/"
-            className="navbar-button"
-          >
+          <Link href="/" className="navbar-button">
             More
           </Link>
         </div>
       </div>
       <div onClick={handleNav} className="md:hidden cursor-pointer">
-        <AiOutlineMenu size={40} />
+        <AiOutlineMenu
+          className="border-y-2 border-r-2 border-[#820000] p-2"
+          size={45}
+        />
       </div>
       <SideBar
         nav={nav}
@@ -136,6 +121,7 @@ const Navbar: React.FC<NavBarProps> = () => {
         handleNav={handleNav}
         language={language}
         handleLanguage={handleLanguage}
+        homeDropdownPages={homeDropdownPages}
       />
     </div>
   );

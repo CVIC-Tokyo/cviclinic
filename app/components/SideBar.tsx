@@ -10,6 +10,7 @@ import {
 } from "react-icons/ai";
 import { FaLanguage } from "react-icons/fa";
 import { BsToggleOff, BsToggleOn } from "react-icons/bs";
+import SideBar_Home from "./dropdowns/SideBar_Home";
 
 interface SideBarProps {
   nav: boolean;
@@ -17,6 +18,7 @@ interface SideBarProps {
   handleNav: () => void;
   language: string;
   handleLanguage: () => void;
+  homeDropdownPages: DropdownPage[];
 }
 
 const SideBar: React.FC<SideBarProps> = ({
@@ -25,6 +27,7 @@ const SideBar: React.FC<SideBarProps> = ({
   handleNav,
   language,
   handleLanguage,
+  homeDropdownPages,
 }) => {
   return (
     <div
@@ -40,6 +43,7 @@ const SideBar: React.FC<SideBarProps> = ({
         }
       >
         <div className="">
+          {/* LOGO AND CLOSE BUTTON */}
           <div className="flex w-full h-[100px] items-center justify-between">
             <Link className="scroll-false" onClick={handleNav} href="/">
               <Image src={cvic_logo_600} height="35" alt="/logo" />
@@ -51,6 +55,7 @@ const SideBar: React.FC<SideBarProps> = ({
               <AiOutlineClose />
             </div>
           </div>
+          {/* SIDE BAR BUTTONS */}
           <div className="py-4 flex-col">
             <ul className="uppercase">
               <div
@@ -75,21 +80,18 @@ const SideBar: React.FC<SideBarProps> = ({
                   </div>
                 )}
               </div>
-              <Link
-                className="hover:scale-200 ease-in duration-300"
-                onClick={() => setNav(false)}
-                href="/"
-              >
-                <li className="py-4 text-sm">Login</li>
+              <SideBar_Home
+                homeDropdownPages={homeDropdownPages}
+                setNav={setNav}
+              />
+              <Link onClick={() => setNav(false)} href="/">
+                <li className="py-4 text-sm">Services</li>
               </Link>
               <Link onClick={() => setNav(false)} href="/">
-                <li className="py-4 text-sm">Cardiac Imaging</li>
+                <li className="py-4 text-sm">Process</li>
               </Link>
               <Link onClick={() => setNav(false)} href="/">
-                <li className="py-4 text-sm">Inspection Flow</li>
-              </Link>
-              <Link onClick={() => setNav(false)} href="/">
-                <li className="py-4 text-sm">Dock Lists</li>
+                <li className="py-4 text-sm">Contact</li>
               </Link>
               <Link onClick={() => setNav(false)} href="/">
                 <li className="py-4 text-sm">Access</li>
