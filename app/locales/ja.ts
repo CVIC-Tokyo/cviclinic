@@ -1,4 +1,4 @@
-const jp = {
+const ja = {
     HOME: 'ホーム',
     ABOUT_CVIC: 'CVICについて',
     DOCTORS: '医師',
@@ -23,3 +23,5 @@ const jp = {
         CLINIC_DESCRIPTION: '心臓MRI検査、心臓ドック、画像診断の専門家チーム',
     },
 };
+
+export default ja;

@@ -23,3 +23,5 @@ const en = {
         CLINIC_DESCRIPTION: 'Team of specialists for cardiovascular MRI examinations, heart check-ups and image diagnosis',
     },
 }
+
+export default en;
