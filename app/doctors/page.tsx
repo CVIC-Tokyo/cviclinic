@@ -4,7 +4,7 @@ const DoctorsPage = () => {
   return (
     <div className="w-full h-auto">
       <div className="w-full h-[600px] flex justify-center items-center">
-        Doctors' Page
+        Doctors Page
       </div>
     </div>
   );
