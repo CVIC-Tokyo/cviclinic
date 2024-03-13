@@ -82,10 +82,13 @@ const SideBar: React.FC<SideBarProps> = ({
               </div>
               <SideBar_Home homeDropdownPages={homeDropdownPages} setNav={ setNav }/>
               <Link onClick={() => setNav(false)} href="/">
-                <li className="py-4 text-sm">Inspection Flow</li>
+                <li className="py-4 text-sm">Services</li>
               </Link>
               <Link onClick={() => setNav(false)} href="/">
-                <li className="py-4 text-sm">Dock Lists</li>
+                <li className="py-4 text-sm">Process</li>
+              </Link>
+              <Link onClick={() => setNav(false)} href="/">
+                <li className="py-4 text-sm">Contact</li>
               </Link>
               <Link onClick={() => setNav(false)} href="/">
                 <li className="py-4 text-sm">Access</li>
