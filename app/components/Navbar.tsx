@@ -8,7 +8,8 @@ import { AiOutlineMenu } from "react-icons/ai";
 import SideBar from "./SideBar";
 import { BsToggleOff, BsToggleOn } from "react-icons/bs";
 import { FaLanguage } from "react-icons/fa";
-import Dropdown_Home from "./Dropdown_Home";
+import Dropdown_Home from "./dropdowns/Dropdown_Home";
+
 
 interface NavBarProps {}
 
@@ -16,7 +17,7 @@ const Navbar: React.FC<NavBarProps> = () => {
   const [nav, setNav] = useState(false);
   const [showShadow, setShowShadow] = useState<boolean>(false);
   const [language, setLanguage] = useState<string>("ja");
-
+  
   useEffect(() => {
     const handleShadow = () => {
       if (typeof window !== "undefined") {
@@ -27,23 +28,30 @@ const Navbar: React.FC<NavBarProps> = () => {
         }
       }
     };
-
+    
     window.addEventListener("scroll", handleShadow);
-
+    
     return () => {
       window.removeEventListener("scroll", handleShadow);
     };
   }, []);
-
+  
   const handleLanguage = () => {
     if (language === "en") {
       setLanguage("ja");
     } else setLanguage("en");
   };
-
+  
   const handleNav = () => {
     setNav(!nav);
   };
+  
+  const homeDropdownPages: DropdownPage[] = [
+    { Home: '' },
+    { "About CVIC": "about" },
+    { Doctors: "doctors" },
+    { Equipments: "equipments" },
+  ];
 
   return (
     <div
@@ -83,22 +91,13 @@ const Navbar: React.FC<NavBarProps> = () => {
         </div>
       </div>
       <div className="max-w-[1240px] mx-auto hidden md:flex justify-between items-center pt-2">
-        <div className="w-full h-full p-1 grid grid-cols-7">
-          <Dropdown_Home />
-          {/* <Link
-            href="/"
-            className="navbar-button"
-          >
-            Home
-          </Link> */}
+        <div className="w-full h-full p-1 grid grid-cols-6">
+          <Dropdown_Home homeDropdownPages={ homeDropdownPages } />
           <Link href="/" className="navbar-button">
-            Cardiac Imaging
+            Services
           </Link>
           <Link href="/" className="navbar-button">
-            Inspection Flow
-          </Link>
-          <Link href="/" className="navbar-button">
-            Dock List
+            Process
           </Link>
           <Link href="/" className="navbar-button">
             Contact
@@ -123,6 +122,7 @@ const Navbar: React.FC<NavBarProps> = () => {
         handleNav={handleNav}
         language={language}
         handleLanguage={handleLanguage}
+        homeDropdownPages={homeDropdownPages}
       />
     </div>
   );
