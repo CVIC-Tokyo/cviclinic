@@ -10,14 +10,13 @@ import { BsToggleOff, BsToggleOn } from "react-icons/bs";
 import { FaLanguage } from "react-icons/fa";
 import Dropdown_Home from "./dropdowns/Dropdown_Home";
 
-
 interface NavBarProps {}
 
 const Navbar: React.FC<NavBarProps> = () => {
   const [nav, setNav] = useState(false);
   const [showShadow, setShowShadow] = useState<boolean>(false);
   const [language, setLanguage] = useState<string>("ja");
-  
+
   useEffect(() => {
     const handleShadow = () => {
       if (typeof window !== "undefined") {
@@ -28,26 +27,26 @@ const Navbar: React.FC<NavBarProps> = () => {
         }
       }
     };
-    
+
     window.addEventListener("scroll", handleShadow);
-    
+
     return () => {
       window.removeEventListener("scroll", handleShadow);
     };
   }, []);
-  
+
   const handleLanguage = () => {
     if (language === "en") {
       setLanguage("ja");
     } else setLanguage("en");
   };
-  
+
   const handleNav = () => {
     setNav(!nav);
   };
-  
+
   const homeDropdownPages: DropdownPage[] = [
-    { Home: '' },
+    { Home: "" },
     { "About CVIC": "about" },
     { Doctors: "doctors" },
     { Equipments: "equipments" },
@@ -92,7 +91,7 @@ const Navbar: React.FC<NavBarProps> = () => {
       </div>
       <div className="max-w-[1240px] mx-auto hidden md:flex justify-between items-center pt-2">
         <div className="w-full h-full p-1 grid grid-cols-6">
-          <Dropdown_Home homeDropdownPages={ homeDropdownPages } />
+          <Dropdown_Home homeDropdownPages={homeDropdownPages} />
           <Link href="/" className="navbar-button">
             Services
           </Link>

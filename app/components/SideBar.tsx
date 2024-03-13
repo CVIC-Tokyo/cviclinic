@@ -80,7 +80,10 @@ const SideBar: React.FC<SideBarProps> = ({
                   </div>
                 )}
               </div>
-              <SideBar_Home homeDropdownPages={homeDropdownPages} setNav={ setNav }/>
+              <SideBar_Home
+                homeDropdownPages={homeDropdownPages}
+                setNav={setNav}
+              />
               <Link onClick={() => setNav(false)} href="/">
                 <li className="py-4 text-sm">Services</li>
               </Link>

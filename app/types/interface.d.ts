@@ -1,3 +1,3 @@
 interface DropdownPage {
-    [ title: string ]: string;
+  [title: string]: string;
 }

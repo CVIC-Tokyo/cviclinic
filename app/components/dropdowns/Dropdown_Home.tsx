@@ -1,14 +1,10 @@
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
-import {
-  IoMdArrowDropdown,
-  IoMdArrowDropup,
-} from "react-icons/io";
-
+import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 
 interface HomeDropDownProps {
   homeDropdownPages: DropdownPage[];
-};
+}
 
 const Dropdown_Home: React.FC<HomeDropDownProps> = ({ homeDropdownPages }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -44,9 +40,12 @@ const Dropdown_Home: React.FC<HomeDropDownProps> = ({ homeDropdownPages }) => {
       {isOpen && (
         <div className="dropdown absolute col-span-1 z-10 h-auto bg-white shadow-xl mt-2 w-[200px]">
           {homeDropdownPages.map((item, index) => (
-            <Link key={index} href={`/${Object.values(item)[0]}`}
-              className="block px-4 py-2 text-sm text-gray-700 md:text-sm lg:text-base">
-                {Object.keys(item)[0]}
+            <Link
+              key={index}
+              href={`/${Object.values(item)[0]}`}
+              className="block px-4 py-2 text-sm text-gray-700 md:text-sm lg:text-base"
+            >
+              {Object.keys(item)[0]}
             </Link>
           ))}
         </div>
