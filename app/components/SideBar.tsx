@@ -12,15 +12,6 @@ import { FaLanguage } from "react-icons/fa";
 import { BsToggleOff, BsToggleOn } from "react-icons/bs";
 import SideBar_Home from "./dropdowns/SideBar_Home";
 
-interface SideBarProps {
-  nav: boolean;
-  setNav: (arg: boolean) => void;
-  handleNav: () => void;
-  language: string;
-  handleLanguage: () => void;
-  homeDropdownPages: DropdownPage[];
-}
-
 const SideBar: React.FC<SideBarProps> = ({
   nav,
   setNav,

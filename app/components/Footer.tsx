@@ -2,8 +2,6 @@ import React from "react";
 import Image from "next/image";
 import cvic_logo_600 from "@/public/logos/cvic_logo_600.png";
 
-interface FooterProps {}
-
 const Footer: React.FC<FooterProps> = () => {
   return (
     <div className="bg-[#820000] text-white w-full h-auto p-3 flex flex-col justify-center items-center align-bottom">

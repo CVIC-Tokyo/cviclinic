@@ -2,10 +2,6 @@ import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 
-interface HomeDropDownProps {
-  homeDropdownPages: DropdownPage[];
-}
-
 const Dropdown_Home: React.FC<HomeDropDownProps> = ({ homeDropdownPages }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);

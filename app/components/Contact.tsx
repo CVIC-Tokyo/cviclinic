@@ -5,8 +5,6 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineReload } from "react-icons/ai";
 import Modal from "./Modal";
 
-interface ContactProps {}
-
 const initValues = {
   name: "",
   surname: "",

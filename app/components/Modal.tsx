@@ -5,11 +5,6 @@ import { Transition } from "@headlessui/react";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import Link from "next/link";
 
-interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [isClosing, setIsClosing] = useState(false);
 

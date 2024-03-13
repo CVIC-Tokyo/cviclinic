@@ -10,7 +10,6 @@ import { BsToggleOff, BsToggleOn } from "react-icons/bs";
 import { FaLanguage } from "react-icons/fa";
 import Dropdown_Home from "./dropdowns/Dropdown_Home";
 
-interface NavBarProps {}
 
 const Navbar: React.FC<NavBarProps> = () => {
   const [nav, setNav] = useState(false);
